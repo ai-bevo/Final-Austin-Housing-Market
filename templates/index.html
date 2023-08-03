@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Austin_Housing_Dashboard</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- script type ="text/javascript" src="https://cdn.leafletjs.com/leaflet-1.7.1/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q==" crossorigin=""></script-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+     
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+       <!-- start KRP Include  chart.js, double_line js file -->
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <!-- end KRP Include  chart.js, double_line js file -->
+
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12 jumbotron text-center">
+            <h1>Austin Housing Dashboard</h1>
+            <p>Use the interactive charts below to explore the dataset</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-10">
+            <div class="linechart">
+              <canvas id="dubLineChart" style="width: 200px; height: 100px;"></canvas>
+              <div class="d-flex justify-content-center">
+                <button id="SalesVsList">Sales vs Total listings</button>
+                <button id="AvgVsMedPrice">Average vs Median price</button>
+                <button id="monthlyInventory">Monthly Inventory</button>
+                <button id="salesVsMedPrice">Sales vs Median price</button>
+                <button id="salesVsInventory">Sales vs Monthly Inventory</button>
+                <button id="medPriceVsList">Median price Vs Total listings</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+       <div class="row justify-content-center">
+        <div style="width:800px">
+          <table class="table table-striped">
+            <h3>Snap Shot: Percent Increase of Median Home Prices Over Time</h3>
+            <thead>
+              <tr>
+                <th scope="col">1990 - 2023</th>
+                <th scope="col">2000 - 2023</th>
+                <th scope="col">2010 - 2023</th>
+                <th scope="col">2020 - 2023</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>523.3%</th>
+                <th>214.5%</th>
+                <th>138.4%</th>
+                <th>31.7%</th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+            <div id="bubble"></div>
+          </div>
+        </div>
+        <br>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-1">
+        </div>
+        <div class="col-sm-2">
+          <div class="idk">
+            <h4 class="float-start">Housing Info:</h4>
+            <input type="radio" name="option" id="annual" class="ra" onclick="annualOption()" />
+            <label for="annual">Annual Sales</label><br>
+            <input type="radio" name="option" id="monthly" class="rm" onclick="monthlyOption()" />
+            <label for="monthly">Monthly Sales</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="month_class">
+            <div id="plot_month"></div>
+          </div>
+          <div class="year_class">
+            <div id="plot"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div>
+            <a href="/index2.html" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Austin Housing Map</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- attach href to button-->  
+    <br>
+     <!-- <p>Austin Housing Map</p>
+        <a href="/index2.html"> link to our map</a>-->
+    <div class="container-fluid">
+      <p>JSONified Data:</p>
+      <ul>
+          <li><a href="{{ url_for('annual_sales_data') }}">/api/v1.0/annual_sales_table</a></li>
+          <li><a href="{{ url_for('monthly_sales_data') }}">/api/v1.0/monthly_sales_table</a></li>
+          <li><a href="{{ url_for('price_distribution_data') }}">/api/v1.0/price_distribution_table</a></li>
+          <li><a href="{{ url_for('austin_2021_data') }}">/api/v1.0/austin_2021_home_sales</a></li>
+      </ul>
+      <!-- Include the JavaScript file -->
+      <script src="https://d3js.org/d3.v5.min.js"></script>
+      <script type="text/javascript" src="/static/js/script.js"></script>
+      <!--<script type="text/javascript" src="/static/js/script_monthly.js"></script> -->
+      <script type="text/javascript" src="/static/js/script_bubble.js"></script>
+      
+      
+          <!-- start KRP Include the JavaScript file AND chart.js, double_line js file -->
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script src="../static/js/doubleLineScript.js"></script>
+    </div>
+    <!-- <h1>Austin_Housing_Dashboard</h1> -->
+</body>
+</html>
