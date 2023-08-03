@@ -13,6 +13,8 @@ Group Project # 3 - Austin Housing Market
 - [Part 1: Populate Database in pgAdmin](#part-1)
 - [Part 2: Python Flask API ](#part-2)
 - [Part 3: Dashboard Page](#part-3)
+- [Part 4: ML modeling - multiple linear regression model
+- [Part 5: Tableau Dashboard - placeholder - https://public.tableau.com/app/profile/allan.ivey/viz/AustinDashboard-MiniProject/Dashboard1
 
 
 ---
