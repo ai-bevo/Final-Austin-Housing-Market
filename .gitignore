@@ -81,7 +81,6 @@ target/
 # IPython
 profile_default/
 config.py
-austin_housing_app.py
 links.html
 
 # pyenv
