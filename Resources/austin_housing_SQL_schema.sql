@@ -94,8 +94,6 @@ CREATE TABLE austin_2021(
 	homeImage TEXT NOT NULL
 );
 	
-	
-);
 
 SELECT * 
 FROM annual_sales;

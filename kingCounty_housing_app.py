@@ -11,7 +11,7 @@ from sqlalchemy.orm import sessionmaker
 from flask import Flask, jsonify, render_template
 from config import pw
 
-connection_string = f"postgres:{pw}@localhost:5432/King_County_Sales"
+connection_string = f"postgres:{pw}@localhost:5432/Seattle_Housing_Market"
 engine = create_engine(f'postgresql://{connection_string}')
 
 
