@@ -1,15 +1,4 @@
-body {
-    padding: 0;
-    margin: 0;
-  }
-  #map,
-  body,
-  html {
-    height: 100%;
-  }
-
-
-  /**
+/**
 * Template Name: EstateAgency
 * Updated: Jul 27 2023 with Bootstrap v5.3.1
 * Template URL: https://bootstrapmade.com/real-estate-agency-bootstrap-template/

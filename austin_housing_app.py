@@ -12,7 +12,7 @@ from flask import Flask, jsonify, render_template
 #from flask_cors import CORS
 from config import pw
 
-connection_string = f"postgres:{pw}@localhost:5432/Austin_Housing_Market"
+connection_string = f"postgres:{pw}@localhost:5433/Austin_Housing_Market"
 engine = create_engine(f'postgresql://{connection_string}')
 
 
@@ -51,7 +51,11 @@ def welcome():
 def welcome_again():
     # List all available api routes.
     return render_template("index2.html")
-  
+
+@austin_housing_app.route("/index3.html")
+def welcome_again2():
+    #list all available api routes
+    return render_template("index3.html")
   
 @austin_housing_app.route("/api/v1.0/annual_sales_table")
 def annual_sales_data():

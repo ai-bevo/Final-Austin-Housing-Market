@@ -6,29 +6,30 @@ Group Project # 3 - Austin Housing Market
 </p>
 
 ---
-## 🏠Table of Contents
+## Table of Contents
 - [Background](#background)
 - [Data Sources](#data)
 - [Findings and Conclusions](#findings)
 - [Part 1: Populate Database in pgAdmin](#part-1)
 - [Part 2: Python Flask API ](#part-2)
 - [Part 3: Dashboard Page](#part-3)
-- [Part 4: ML modeling - multiple linear regression model](#part-4)
-- [Part 5: Tableau Dashboard](#part-5)
-    - placeholder - https://public.tableau.com/app/profile/allan.ivey/viz/AustinDashboard-MiniProject/Dashboard1
+
+- [Part 4: ML modeling - multiple linear regression model
+- [Part 5: Tableau Dashboard - placeholder - https://public.tableau.com/app/profile/allan.ivey/viz/AustinDashboard-MiniProject/Dashboard1
+
 
 
 ---
-## 🏡houseBackground <a name="background"></a>
+## Background <a name="background"></a>
 
 This project aims to examine monthly housing activity in the Austin-Round Rock Area from 1990 to 2023. The Austin Housing market is one of the hottest markets in 2021, so we focused in on that as well. We utilized key metrics such as average home prices, housing inventory, and sales volume to analyze the housing market's growth and fluctuations over time. We completed a comprehensive analysis and a visualization dashboard using a Python Flask-powered API, HTML/CSS, JavaScript, and a SQL database. plotly, leaflet, D3 and charts.js. This project seeks to provide valuable insights in understanding Austin's real estate dynamics.
 
 
-# 🏘️Final Production Database
+# Final Production Database
 Uploaded the CSV data files into a Postgres database a relational database management system.
 
 ---
-## 🏚️Data Sources <a name="data"></a>
+## Data Sources <a name="data"></a>
 Data for this dataset was pulled from a kaggle csv scraped in January 2021, along with csvs from Texas A&M University Texas Real Estate Research Center {https://www.recenter.tamu.edu/data/housing-activity/#!/activity/MSA/Austin-Round_Rock}. All data collected and used in this analysis is intended for educational purposes only.
  1.  annual_home_sales.csv (From Texas A&M University Texas Real Estate Research Center)
  2.  monthly_home_sales.csv (From Texas A&M University Texas Real Estate Research Center)
@@ -36,7 +37,7 @@ Data for this dataset was pulled from a kaggle csv scraped in January 2021, alon
  4.  austinHousingData.csv (From kaggle)
 
 ---
-## 🏠Findings and Conclusions <a name="findings"></a>
+## Findings and Conclusions <a name="findings"></a>
 The following findings and conclusions from the analysis are as follows:
 
  1.  ### Change in housing prices over time compared to monthly inventory  
@@ -65,7 +66,7 @@ The following findings and conclusions from the analysis are as follows:
 </p>
  
 ---
-## 🏡 Part 1: Populate Database in pgAdmin <a name="part-1"></a>
+## Part 1: Populate Database in pgAdmin <a name="part-1"></a>
 Deeper discription of the data can be found in the Resources folder austin_housing_SQL_schema.sql document
   1. annual_home_sales.csv column info:
     
@@ -99,7 +100,7 @@ Deeper discription of the data can be found in the Resources folder austin_housi
     -  data was collected from 2021
       - This data set was important to better illustrate the houses on the market in 2021 in the Austin Round-rock area
 ---
-## 🏡 Part 2: Python Flask API  <a name="part-2"></a>
+## Part 2: Python Flask API  <a name="part-2"></a>
 The python Flask api was used to jsonify the databases:
 
  1.  annual_home_sales.csv
@@ -123,7 +124,7 @@ The python Flask api was used to jsonify the databases:
 </p>
 
 ---
-## 🏘️Part 3: Dashboard Page <a name="part-3"></a>
+## Part 3: Dashboard Page <a name="part-3"></a>
 Backend dashboard showcases data visualizations that run without error.
 1. A JavaScript library not shown in class used in this project.
       -  chart.js
@@ -134,8 +135,5 @@ Backend dashboard showcases data visualizations that run without error.
 </p>
 
 ---
-## 🏚️Part 4: ML modeling - multiple linear regression model <a name="part-4"></a>
 
----
-## 🏠Part 5: Tableau Dashboard <a name="part-5"></a>
 
