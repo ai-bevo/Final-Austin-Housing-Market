@@ -1,8 +1,8 @@
-# Seattle Washington Housing Market; Everyone Deserves a Home
-Group Project # 4 - eattle Washington Housing Market
+# Seattle Washington Housing Market
+Group Project # 4 - Seattle Washington Housing Market with machine learning model
 
 <p align="center">
-<img src="images/austin-texas-skyline.jpg" alt="Austin skyline" width="500" height="300">
+<img src="images/seattle.jpg" alt="Austin skyline" width="500" height="300">
 </p>
 
 ---
@@ -13,7 +13,6 @@ Group Project # 4 - eattle Washington Housing Market
 - [Part 1: Populate Database in pgAdmin](#part-1)
 - [Part 2: Python Flask API ](#part-2)
 - [Part 3: Dashboard Page](#part-3)
-
 - [Part 4: ML modeling - multiple linear regression model
 - [Part 5: Tableau Dashboard - placeholder - https://public.tableau.com/app/profile/allan.ivey/viz/AustinDashboard-MiniProject/Dashboard1
 
@@ -31,10 +30,9 @@ Uploaded the CSV data files into a Postgres database a relational database manag
 ---
 ## Data Sources <a name="data"></a>
 Data for this dataset was pulled from a kaggle csv scraped in January 2021, along with csvs from Texas A&M University Texas Real Estate Research Center {https://www.recenter.tamu.edu/data/housing-activity/#!/activity/MSA/Austin-Round_Rock}. All data collected and used in this analysis is intended for educational purposes only.
- 1.  annual_home_sales.csv (From Texas A&M University Texas Real Estate Research Center)
- 2.  monthly_home_sales.csv (From Texas A&M University Texas Real Estate Research Center)
- 3.  price_distribution.csv (From Texas A&M University Texas Real Estate Research Center)
- 4.  austinHousingData.csv (From kaggle)
+
+ 1.  seattle_sales_all_data.csv (From kaggle)
+ 2.  seattle_sales.csv (cleaned up kaggle csv of only seattle from 2018-2022)
 
 ---
 ## Findings and Conclusions <a name="findings"></a>
