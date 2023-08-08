@@ -1,7 +1,7 @@
--- DROP TABLE IF EXISTS king_county_sales
+DROP TABLE IF EXISTS seattle_sales
 
-CREATE TABLE king_county_sales(
-	id SERIAL PRIMARY KEY,
+CREATE TABLE seattle_sales(
+	id INT PRIMARY KEY,
     sale_id VARCHAR(50) NOT NULL,
     pinx VARCHAR(255),
     sale_date DATE,
@@ -49,5 +49,6 @@ CREATE TABLE king_county_sales(
     view_lakesamm INT,
     view_otherwater INT,
     view_other INT,
-    submarket VARCHAR(100)
+    submarket VARCHAR(100),
+	years INT
 );
