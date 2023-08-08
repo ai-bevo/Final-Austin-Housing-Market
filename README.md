@@ -1,5 +1,5 @@
-# Austin Housing Market; Everyone Deserves a Home
-Group Project # 3 - Austin Housing Market 
+# Seattle Washington Housing Market; Everyone Deserves a Home
+Group Project # 4 - eattle Washington Housing Market
 
 <p align="center">
 <img src="images/austin-texas-skyline.jpg" alt="Austin skyline" width="500" height="300">
