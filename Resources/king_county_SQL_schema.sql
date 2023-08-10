@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS seattle_sales
+--DROP TABLE IF EXISTS seattle_sales
 
 CREATE TABLE seattle_sales(
 	id INT PRIMARY KEY,
@@ -52,3 +52,16 @@ CREATE TABLE seattle_sales(
     submarket VARCHAR(100),
 	years INT
 );
+
+--DROP TABLE IF EXISTS monthly_seattle_sales;
+
+CREATE TABLE monthly_seattle_sales(
+	id serial PRIMARY KEY,
+	Year INT,
+    Month INT,
+    Average_Sale_Price FLOAT,
+    Median_Sale_Price FLOAT,
+    Total_Houses_sold INT
+);
+
+--SELECT * FROM monthly_seattle_sales;
