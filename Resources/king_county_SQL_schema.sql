@@ -53,15 +53,15 @@ CREATE TABLE seattle_sales(
 	years INT
 );
 
---DROP TABLE IF EXISTS monthly_seattle_sales;
+DROP TABLE IF EXISTS monthly_seattle_sales;
 
 CREATE TABLE monthly_seattle_sales(
 	id serial PRIMARY KEY,
-	Year INT,
-    Month INT,
+	Years INT,
+    Months INT,
     Average_Sale_Price FLOAT,
     Median_Sale_Price FLOAT,
     Total_Houses_sold INT
 );
 
---SELECT * FROM monthly_seattle_sales;
+SELECT * FROM monthly_seattle_sales;
