@@ -19,6 +19,7 @@ Base = automap_base()
 Base.prepare(engine, reflect=True)
 
 shm = Base.classes.seattle_sales
+md = Base.classes.monthly_seattle_sales
 
 session = Session(engine)
 
@@ -68,6 +69,28 @@ def seattle_data():
         seattle_data.append(shm_dict)
     return jsonify(seattle_data)
      
+
+@seattle_housing_app.route("/api/v1.0/monthly_seattle_sales")
+def monthly_seattle_sales():
+    session = Session(engine)
+    
+    results = session.query(md.id, md.years, md.months, md.average_sale_price, md.median_sale_price, md.total_houses_sold)
+        
+                      
+    session.close()
+    
+    monthly_seattle_sales_data = []
+    for id, years, months, average_sale_price, median_sale_price, total_houses_sold, in results:
+        md_dict = {}
+        md_dict["id"] = id
+        md_dict["years"] = years
+        md_dict["months"] = months
+        md_dict["average_sale_price"] = average_sale_price
+        md_dict["median_sale_price"] = median_sale_price
+        md_dict["total_houses_sold"] = total_houses_sold
+
+        monthly_seattle_sales_data.append(md_dict)
+    return jsonify(monthly_seattle_sales_data)     
 if __name__ == '__main__':
     seattle_housing_app.run(debug=True)
 
