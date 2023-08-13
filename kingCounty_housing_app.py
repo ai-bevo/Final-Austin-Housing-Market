@@ -11,7 +11,7 @@ from sqlalchemy.orm import sessionmaker
 from flask import Flask, jsonify, render_template
 from config import pw
 
-connection_string = f"postgres:{pw}@localhost:5432/Seattle_Housing_Market"
+connection_string = f"postgres:{pw}@localhost:5433/Seattle_Housing_Market"
 engine = create_engine(f'postgresql://{connection_string}')
 
 Base = automap_base()
@@ -29,7 +29,7 @@ session = Session(engine)
 seattle_housing_app = Flask(__name__)
 
 
-@seattle_housing_app.route("/")
+@seattle_housing_app.route("/", methods=['GET', 'POST'])
 def welcome():
     # List all available api routes.
 
@@ -74,13 +74,13 @@ def seattle_data():
 def monthly_seattle_sales():
     session = Session(engine)
     
-    results = session.query(md.id, md.years, md.months, md.average_sale_price, md.median_sale_price, md.total_houses_sold)
+    results = session.query(md.id, md.years, md.months, md.average_sale_price, md.median_sale_price, md.total_houses_sold, md.interest_rate)
         
                       
     session.close()
     
     monthly_seattle_sales_data = []
-    for id, years, months, average_sale_price, median_sale_price, total_houses_sold, in results:
+    for id, years, months, average_sale_price, median_sale_price, total_houses_sold, interest_rate in results:
         md_dict = {}
         md_dict["id"] = id
         md_dict["years"] = years
@@ -88,6 +88,7 @@ def monthly_seattle_sales():
         md_dict["average_sale_price"] = average_sale_price
         md_dict["median_sale_price"] = median_sale_price
         md_dict["total_houses_sold"] = total_houses_sold
+        md_dict["interest_rate"] = interest_rate
 
         monthly_seattle_sales_data.append(md_dict)
     return jsonify(monthly_seattle_sales_data)     

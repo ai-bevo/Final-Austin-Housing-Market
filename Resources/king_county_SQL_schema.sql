@@ -61,7 +61,8 @@ CREATE TABLE monthly_seattle_sales(
     Months INT,
     Average_Sale_Price FLOAT,
     Median_Sale_Price FLOAT,
-    Total_Houses_sold INT
+    Total_Houses_sold INT,
+	interest_rate FLOAT
 );
 
 SELECT * FROM monthly_seattle_sales;

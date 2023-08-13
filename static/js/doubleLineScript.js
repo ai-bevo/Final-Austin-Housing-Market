@@ -6,17 +6,20 @@ let medPriceArray = [];
 let yearsArray = [];
 let linechart;
 let monthTotalSoldArray = [];
+let interestRateArray = [];
 
 const jsonData2 = "http://127.0.0.1:5000/api/v1.0/monthly_seattle_sales";
 d3.json(jsonData2).then(function (data2) {
   for (let i = 0; i < data2.length; i++) {
     let avgPrice = data2[i]['average_sale_price'];
     let medPrice = data2[i]['median_sale_price'];
+    let interestRate = data2[i]['interest_rate'];
     monthArray.push(data2[i]['months']);
     avgPriceArray.push(avgPrice);
     medPriceArray.push(medPrice);
-    yearsArray.push(data2[i]['years'])
-    monthTotalSoldArray.push(data2[i]['total_houses_sold'])
+    interestRateArray.push(interestRate);
+    yearsArray.push(data2[i]['years']);
+    monthTotalSoldArray.push(data2[i]['total_houses_sold']);
   }
   createChart();
 });
@@ -113,6 +116,12 @@ avgVsMedPriceBtn.addEventListener("click", handleAvgVsMedPriceClick);
 const salesVsMedPriceBtn = document.getElementById("salesVsMedPrice");
 salesVsMedPriceBtn.addEventListener("click", handleSalesVsMedPriceClick);
 
+const ratesVsMedPriceBtn = document.getElementById("ratesVsMedPrice");
+ratesVsMedPriceBtn.addEventListener("click", handleRatesVsMedPriceClick);
+
+const salesVsRatesBtn = document.getElementById("salesVsRates");
+salesVsRatesBtn.addEventListener("click", handleSalesVsRatesClick);
+
 function handleAvgVsMedPriceClick() {
   if (linechart) {
     linechart.destroy();
@@ -127,6 +136,20 @@ function handleSalesVsMedPriceClick() {
   }
 }
 
+function handleRatesVsMedPriceClick() {
+  if (linechart) {
+    linechart.destroy();
+    createRatesVsMedPriceChart();
+  }
+}
+
+function handleSalesVsRatesClick() {
+  if (linechart) {
+    linechart.destroy();
+    createSalesVsRatesChart();
+  }
+}
+
 function createSalesVsMedPriceChart() {
   const CHART = document.getElementById("dubLineChart").getContext('2d');
   linechart = new Chart(CHART, {
@@ -135,16 +158,18 @@ function createSalesVsMedPriceChart() {
       labels: getFormattedDateLabels(monthArray, yearsArray),
       datasets: [
         {
-          label: "House Sales per Months",
+          label: "House Sales",
           data: monthTotalSoldArray,
-          borderColor: 'coral',
-          backgroundColor: 'rgba(238, 130, 238, 0.2)',
+          // borderColor: 'coral',
+          borderColor:'Gray',
+          // backgroundColor: 'rgba(238, 130, 238, 0.2)',
+          backgroundColor: 'rgba(224, 224, 224, 0.2)',
           tension: 0.4,
           fill: true,
           yAxisID: 'sales-axis'
         },
         {
-          label: "Median Price per Months",
+          label: "Median Price",
           data: medPriceArray,
           borderColor: 'blue',
           backgroundColor: 'rgba(42, 213, 228, 0.2)',
@@ -161,7 +186,7 @@ function createSalesVsMedPriceChart() {
         },
         title: {
           display: true,
-          text: 'Comparison of Change in Total House Sales and Median Price Per Month'
+          text: 'Comparison of Change in Total Home Sales and Median Price Per Month'
         }
       },
       scales: {
@@ -175,6 +200,139 @@ function createSalesVsMedPriceChart() {
         },
         y: {
           'sales-axis': {
+            type: 'linear',
+            beginAtZero: true,
+            position: 'right'
+          },
+          'default': {
+            type: 'linear',
+            beginAtZero: true,
+            position: 'left'
+          }
+        }
+      }
+    }
+  });
+  linechart.update();
+}
+
+
+function createRatesVsMedPriceChart() {
+  const CHART = document.getElementById("dubLineChart").getContext('2d');
+  linechart = new Chart(CHART, {
+    type: 'line',
+    data: {
+      labels: getFormattedDateLabels(monthArray, yearsArray),
+      datasets: [
+        {
+          label: "Mortgage Interest Rate",
+          data: interestRateArray,
+          borderColor: 'red',
+          backgroundColor: 'rgba(238, 130, 238, 0.2)',
+          tension: 0.4,
+          fill: true,
+          yAxisID: 'rates-axis'
+        },
+        {
+          label: "Median Price per Month",
+          data: medPriceArray,
+          borderColor: 'blue',
+          backgroundColor: 'rgba(42, 213, 228, 0.2)',
+          tension: 0.4,
+          fill: true
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'top'
+        },
+        title: {
+          display: true,
+          text: 'Comparison of Change in Mortgage Interest Rates and Median Price Per Month'
+        }
+      },
+      scales: {
+        x: {
+          type: 'category',
+          position: 'bottom',
+          title: {
+            display: true,
+            text: 'Months and Years'
+          }
+        },
+        y: {
+          'rates-axis': {
+            type: 'linear',
+            beginAtZero: true,
+            position: 'right'
+          },
+          'default': {
+            type: 'linear',
+            beginAtZero: true,
+            position: 'left'
+          }
+        }
+      }
+    }
+  });
+  linechart.update();
+}  
+
+
+function createSalesVsRatesChart() {
+  const CHART = document.getElementById("dubLineChart").getContext('2d');
+  linechart = new Chart(CHART, {
+    type: 'line',
+    data: {
+      labels: getFormattedDateLabels(monthArray, yearsArray),
+      datasets: [
+        {
+          label: "Mortgage Interest Rate",
+          data: interestRateArray,
+          borderColor: 'red',
+          backgroundColor: 'rgba(238, 130, 238, 0.2)',
+          tension: 0.4,
+          fill: true,
+          yAxisID: 'rates-axis'
+        },
+
+       {
+          label: "House Sales",
+          data: monthTotalSoldArray,
+          // borderColor: 'coral',
+          borderColor:'Gray',
+          // backgroundColor: 'rgba(238, 130, 238, 0.2)',
+          backgroundColor: 'rgba(224, 224, 224, 0.2)',
+          tension: 0.4,
+          fill: true,
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'top'
+        },
+        title: {
+          display: true,
+          text: 'Comparison of Change in Total Home Sales and Interest Rate'
+        }
+      },
+      scales: {
+        x: {
+          type: 'category',
+          position: 'bottom',
+          title: {
+            display: true,
+            text: 'Months and Years'
+          }
+        },
+        y: {
+          'rates-axis': {
             type: 'linear',
             beginAtZero: true,
             position: 'right'

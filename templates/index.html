@@ -1,137 +1,188 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>King_County_Housing_Dashboard</title>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <!-- script type ="text/javascript" src="https://cdn.leafletjs.com/leaflet-1.7.1/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q==" crossorigin=""></script-->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-     crossorigin=""/>
-     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-     crossorigin=""></script>
-     
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-       <!-- start KRP Include  chart.js, double_line js file -->
-      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <!-- end KRP Include  chart.js, double_line js file -->
+  <title>Seattle Housing Analysis</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <!-- script type ="text/javascript" src="https://cdn.leafletjs.com/leaflet-1.7.1/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q==" crossorigin=""></script-->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+   integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+   crossorigin=""/>
+   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+   integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+   crossorigin=""></script>
 
+     <!-- start KRP Include  chart.js, double_line js file -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <!-- end KRP Include  chart.js, double_line js file -->
+  
+  <style>
+
+.mb-4, .my-4 {
+margin-top: 50px;
+margin-bottom: 1.5rem !important;
+color: #fff;
+}
+
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 800px}
+    
+    /* Set white background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #fff;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #D3D3D3;
+      color: gray;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 600px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+
+      /* Footer styles */
+    .footer-custom {
+    background-color: #222; /* Dark background color */
+    color: #ccc; /* Light text color */
+    padding: 15px;
+    }
+
+    /* Custom CSS to adjust logo color */
+    .logo-icon {
+      filter: brightness(100%); /* Adjust the value to control brightness */
+      transition: filter 0.3s ease-in-out; /* Add smooth transition effect */
+    }
+
+    /* Apply a lighter shade of gray to the icons on hover */
+    .logo-icon:hover {
+      filter: brightness(50%);
+    }
+
+    .btn.btn-inverse:hover {
+      background-color: #444; /* Darker background color on hover */
+      color: #fff; /* White text on hover */
+      border-color: #444; /* Darker border color on hover */
+    }
+  </style>
 </head>
 <body>
+
+  <nav class="navbar navbar-inverse">
     <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-12 jumbotron text-center">
-            <h1>King County Seattle Washington Housing Dashboard</h1>
-            <p>Use the interactive charts below to explore the dataset</p>
-          </div>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href=   "#"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+            <li><a href="{{ url_for('seattle_data') }}" class="btn btn-secondary bt-lg active">Seattle Sales Data</a></li> 
+              <li><a href="{{ url_for('monthly_seattle_sales') }}" class="btn btn-secondary bt-lg active">Seattle Monthly Data</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+<div class="bg-image col-lg-12 jumbotron text-center"
+      style="
+        background-image: url('../static/images/seattle.jpg');background-repeat: no-repeat;
+        padding:50px;height: 400px;
+        background-size:cover;">
+
+        <h1 class="mb-4 h1"> Seattle Washington Housing Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
         </div>
-        <div class="row">
-          <div class="col-lg-1"></div>
-          <div class="col-lg-10">
-            <div class="linechart">
-              <canvas id="dubLineChart" style="width: 200px; height: 100px;"></canvas>
-              <div class="d-flex justify-content-center">
-                <button id="SalesVsList">Sales vs Total listings</button>
-                <button id="AvgVsMedPrice">Average vs Median price</button>
-                <button id="monthlyInventory">Monthly Inventory</button>
-                <button id="salesVsMedPrice">Sales vs Median price</button>
-                <button id="salesVsInventory">Sales vs Monthly Inventory</button>
-                <button id="medPriceVsList">Median price Vs Total listings</button>
-              </div>
+
+
+
+<div class="container-fluid text-center">    
+  <div class="row content">
+      <div class="col-sm-2 sidenav">
+      </div>
+    <div class="row justify-content-center">
+    
+      <div class="col-sm-8 text-left"> 
+        <h1>Welcome</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <hr>
+        <h3>Test</h3>
+        <p>Lorem ipsum...</p>  
+    
+         <div class="linechart">
+           <canvas id="dubLineChart" style="width: 300px; height: 150px;"></canvas>
+           <div class="text-center mt-3">
+            
+              <button id="AvgVsMedPrice" class="btn btn-inverse">Average vs Median price</button>
+              <button id="salesVsMedPrice" class="btn btn-inverse">Sales vs Median price</button>
+              <button id="ratesVsMedPrice" class="btn btn-inverse">Int-Rates vs Median price</button>
+              <button id="salesVsRates" class="btn btn-inverse">Sales vs Int-Rates</button>
             </div>
           </div>
-        </div>
-        <br>
-        <br>
-       <div class="row justify-content-center">
-        <div style="width:800px">
-          <table class="table table-striped">
-            <h3>Snap Shot: Percent Increase of Median Home Prices Over Time</h3>
-            <thead>
-              <tr>
-                <th scope="col">1990 - 2023</th>
-                <th scope="col">2000 - 2023</th>
-                <th scope="col">2010 - 2023</th>
-                <th scope="col">2020 - 2023</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>523.3%</th>
-                <th>214.5%</th>
-                <th>138.4%</th>
-                <th>31.7%</th>
-              </tr>
-            </tbody>
-          </table>
-        </div>
       </div>
-
-        <div class="row">
-          <div class="col-md-1"></div>
-          <div class="col-md-10">
-            <div id="bubble"></div>
-          </div>
-        </div>
-        <br>
     </div>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-1">
-        </div>
-        <div class="col-sm-2">
-          <div class="idk">
-            <h4 class="float-start">Housing Info:</h4>
-            <input type="radio" name="option" id="annual" class="ra" onclick="annualOption()" />
-            <label for="annual">Annual Sales</label><br>
-            <input type="radio" name="option" id="monthly" class="rm" onclick="monthlyOption()" />
-            <label for="monthly">Monthly Sales</label>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="month_class">
-            <div id="plot_month"></div>
-          </div>
-          <div class="year_class">
-            <div id="plot"></div>
-          </div>
-        </div>
-      </div>
+  </div>
+</div>
+
+
+<footer class="container-fluid text-center footer-custom">
+  <div class="row">
+    <div class="col-xs-12">
+      <p><h4>Contributions by:</h4></p>
       <div class="row">
         <div class="col-sm-6">
-          <div>
-            <a href="/index2.html" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Austin Housing Map</a>
-          </div>
-          <div>
-            <a href="/index3.html" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Test Page</a>
-          </div>
+          <ul class="list-unstyled">
+            <li><h4>Allan Ivey</h4><a href="#" target="_blank"><img src="../static/images/linkedin.png" alt="LinkedIn" width="30" height="30" class="logo-icon"></a> | <a href="#" target="_blank"><img src="../static/images/github.png" alt="GitHub" width="30" height="30" class="logo-icon"></a></li>
+            <li><h4>Nathan Karr</h4><a href="#" target="_blank"><img src="../static/images/linkedin.png" alt="LinkedIn" width="30" height="30" class="logo-icon"></a> | <a href="#" target="_blank"><img src="../static/images/github.png" alt="GitHub" width="30" height="30" class="logo-icon"></a></li>
+          </ul>
+        </div>
+        <div class="col-sm-6">
+          <ul class="list-unstyled">
+            <li><h4>Ivy Jones</h4><a href="#" target="_blank"><img src="../static/images/linkedin.png" alt="LinkedIn" width="30" height="30" class="logo-icon"></a> | <a href="#" target="_blank"><img src="../static/images/github.png" alt="GitHub" width="30" height="30" class="logo-icon"></a></li>
+            <li><h4>Kristen Pollok</h4><a href="#" target="_blank"><img src="../static/images/linkedin.png" alt="LinkedIn" width="30" height="30" class="logo-icon"></a> | <a href="#" target="_blank"><img src="../static/images/github.png" alt="GitHub" width="30" height="30" class="logo-icon"></a></li>
+          </ul>
         </div>
       </div>
     </div>
+  </div>
+</footer>
 
-    <!-- attach href to button-->  
-    <br>
-     <!-- <p>Austin Housing Map</p>
-        <a href="/index2.html"> link to our map</a>-->
-    <div class="container-fluid">
-      <p>JSONified Data:</p>
-      <ul>
-          <li><a href="{{ url_for('seattle_data') }}">/api/v1.0//api/v1.0/seattle_real_estate</a></li>
-   
-      </ul>
-      <!-- Include the JavaScript file -->
-      <script src="https://d3js.org/d3.v5.min.js"></script>
+
+
+
+
+<script src="https://d3js.org/d3.v5.min.js"></script>
       <script type="text/javascript" src="/static/js/script.js"></script>
       <!--<script type="text/javascript" src="/static/js/script_monthly.js"></script> -->
-      <script type="text/javascript" src="/static/js/script_bubble.js"></script>
+      <!--<script type="text/javascript" src="/static/js/script_bubble.js"></script> -->
       
       
           <!-- start KRP Include the JavaScript file AND chart.js, double_line js file -->
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
       <script src="../static/js/doubleLineScript.js"></script>
-    </div>
-    <!-- <h1>Austin_Housing_Dashboard</h1> -->
+
 </body>
 </html>
