@@ -15,7 +15,7 @@ Group Project # 4 - Seattle Washington Housing Market with machine learning mode
 - [Part 2: Python Flask API ](#part-2)
 - [Part 3: Dashboard Page](#part-3)
 - [Part 4: ML modeling - multiple linear regression model](#part-4)
-- [Part 5: Tableau Dashboard](#part-5) - placeholder - https://public.tableau.com/app/profile/allan.ivey/viz/AustinDashboard-MiniProject/Dashboard1
+- [Part 5: Tableau Dashboard](#part-5) 
 
 ---
 ## 🏠 Background <a name="background"></a>
@@ -85,6 +85,8 @@ Model Analysis
 
 ### Housing Distribution in Seattle (2018-2022) with Square Feet:
 This Tableau visualization is a dynamic map representing residential houses in Seattle between 2018 and 2022. The map is color-coded to display the distribution of houses based on square footage and has a filter to select the number of bedrooms. Each house is represented by a marker on the map, and the color e of the marker corresponds to the square footage. This visualization provides a quick overview of the spatial distribution of different-sized houses with varying bedroom counts, allowing users to identify trends and patterns in the housing market over the specified years.
+Link: https://public.tableau.com/shared/2HNF2S25K?:display_count=n&:origin=viz_share_link
 
 ### Average Sales Price Mapping with Average & Median Price Analysis (2018-2022):
 This Tableau visualization combines a map with line graphs to depict the average sales prices of homes in Seattle from 2018 to 2022. The map itself displays geographic areas with color gradients representing different price ranges. The graphs show the trends in both average and median prices over the same period. The graph's x-axis represents the years, while the y-axis represents the price. This visualization enables users to compare the average and median price trends against the spatial distribution of price ranges, giving insights into the changing real estate market dynamics and providing a comprehensive view of price fluctuations over time.
+Link: https://public.tableau.com/views/Seattle_Housing_Price_Dashboard/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link
