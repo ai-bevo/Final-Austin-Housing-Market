@@ -126,11 +126,15 @@ color: #fff;
     <div class="row justify-content-center">
     
       <div class="col-sm-8 text-left"> 
-        <h1>Welcome</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <h1>Project Background</h1>
+        <p>Welcome to the Seattle Washington Housing Market Analysis project, where we dive deep into the real estate dynamics of one of the Pacific Northwest's most exciting cities. This repository is dedicated to an in-depth exploration of the housing market trends spanning the years 2018 to 2022 in the bustling urban landscape of Seattle. Powered by the combined prowess of PostgreSQL and a Python Flask application, our project presents an interactive dashboard that offers an insightful overview of the housing market's evolution during this significant timeframe.</p>
+
+        <p> We completed a comprehensive analysis and a visualization dashboard using a Python Flask-powered API, HTML/CSS, JavaScript, and a SQL database plotly, leaflet, D3 and charts.js. This project seeks to provide valuable insights in understanding Seattle's real estate dynamics.</p>
+                  
+        <p>In addition to dissecting historical trends, we've developed a cutting-edge machine learning model aimed at forecasting housing prices in the Seattle area. Leveraging the power of Random Forest and Linear Regression algorithms, we've trained a robust predictive model that takes into account a multitude of factors affecting housing prices. By incorporating data on property attributes, location details, economic indicators, and more, our model serves as a powerful tool for prospective buyers, sellers, and investors looking to make informed decisions in the complex Seattle real estate landscape.</p>
         <hr>
-        <h3>Test</h3>
-        <p>Lorem ipsum...</p>  
+        <h3>Seattle Market - 10,000 FT View</h3>
+        <p>The charts below proivde a glance at the past five years of the Seattle housing market from January, 2018 - December, 2022.</p>  
     
          <div class="linechart">
            <canvas id="dubLineChart" style="width: 300px; height: 150px;"></canvas>
@@ -147,6 +151,33 @@ color: #fff;
   </div>
 </div>
 
+<hr>
+
+<div class="text-center">
+  <div class='tableauPlaceholder' id='viz1691993257490' style='margin: 0 auto;'>
+    <noscript>
+      <a href='#'>
+        <img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Se&#47;Seattle_Housing_Price_Dashboard&#47;Dashboard1&#47;1_rss.png' style='border: none' />
+      </a>
+    </noscript>
+    <object class='tableauViz' style='display:none;'>
+      <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+      <param name='embed_code_version' value='3' />
+      <param name='site_root' value='' />
+      <param name='name' value='Seattle_Housing_Price_Dashboard&#47;Dashboard1' />
+      <param name='tabs' value='no' />
+      <param name='toolbar' value='no' />
+      <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Se&#47;Seattle_Housing_Price_Dashboard&#47;Dashboard1&#47;1.png' />
+      <param name='animate_transition' value='yes' />
+      <param name='display_static_image' value='yes' />
+      <param name='display_spinner' value='yes' />
+      <param name='display_overlay' value='yes' />
+      <param name='display_count' value='yes' />
+      <param name='language' value='en-US' />
+      <param name='tootip' value='yes' />
+    </object>
+  </div>
+</div>
 
 <footer class="container-fluid text-center footer-custom">
   <div class="row">
@@ -187,23 +218,37 @@ color: #fff;
 </footer>
 
 
-
-
-
-
-
-
-
-
 <script src="https://d3js.org/d3.v5.min.js"></script>
       <script type="text/javascript" src="/static/js/script.js"></script>
-      <!--<script type="text/javascript" src="/static/js/script_monthly.js"></script> -->
-      <!--<script type="text/javascript" src="/static/js/script_bubble.js"></script> -->
       
       
-          <!-- start KRP Include the JavaScript file AND chart.js, double_line js file -->
+      
+      <!-- start KRP Include the JavaScript file AND chart.js, double_line js file -->
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
       <script src="../static/js/doubleLineScript.js"></script>
+
+      <script type='text/javascript'>
+        var divElement = document.getElementById('viz1691993257490');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        if (divElement.offsetWidth > 800) {
+          vizElement.style.width='1120px';
+          vizElement.style.minHeight='587px';
+          vizElement.style.maxHeight='887px';
+          vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+        } else if (divElement.offsetWidth > 500) {
+          vizElement.style.width='1120px';
+          vizElement.style.minHeight='587px';
+          vizElement.style.maxHeight='887px';
+          vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+        } else {
+          vizElement.style.width='100%';
+          vizElement.style.height='777px';
+        }
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+      </script>
+
 
 </body>
 </html>
