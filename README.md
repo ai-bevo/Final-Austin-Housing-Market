@@ -2,7 +2,7 @@
 ---
 Group Project # 4 - Seattle Washington Housing Market with machine learning model
 <p align="center">
-<img src="/static/images/seattle.jpg" alt="Seattle skyline" width="1001" height="225">
+<img src="/static/images/seattle_small.jpg" alt="Seattle skyline" width="640" height="329">
 </p>
 
 ---
