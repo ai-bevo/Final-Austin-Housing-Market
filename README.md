@@ -125,7 +125,7 @@ I leveraged Seaborn for data visualization, creating insightful pair plots, dist
 • **Beyond Square Footage:**
   - Uncovering the primary drivers of house prices beyond the conventional metric of square footage.
 
-• **Optimal Machine Learning Algorithm: **
+• **Optimal Machine Learning Algorithm:**
   - Determining the most effective machine learning algorithm for accurately predicting house prices within the context of King County.
 
 Refinement ensures a concise and clear articulation of the key inquiries, highlighting the core themes of your analysis and investigation.
@@ -150,7 +150,7 @@ Refinement ensures a concise and clear articulation of the key inquiries, highli
  
   Realizing that our initial correlation-based feature removal was counterproductive, we promptly reverted the changes and restored the original subsets. This corrective action successfully brought the R-squared values back to their improved state.
 
-     This experience taught us the importance of cautious feature selection and highlighted that while correlation analysis can guide feature removal, it's crucial to consider the broader impact on model performance. It reinforced the idea that model optimization is a dynamic process, requiring a balance between feature manipulation and maintaining the integrity of the predictive power achieved through the initial subset approach.
+This experience taught us the importance of cautious feature selection and highlighted that while correlation analysis can guide feature removal, it's crucial to consider the broader impact on model performance. It reinforced the idea that model optimization is a dynamic process, requiring a balance between feature manipulation and maintaining the integrity of the predictive power achieved through the initial subset approach.
 
 
 
