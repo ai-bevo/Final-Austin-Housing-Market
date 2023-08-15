@@ -74,9 +74,9 @@ The python Flask api was used to jsonify the databases:
 
 ## Background Information:
 	
-   King county is a region in the state of Washington, USA, and it’s known for including the city of Seattle. EDA involves analyzing and summarizing the data to gain insights, while machine learning modeling involves creating predictive models using algorithms. Here’s a general outline of the process that was followed.
+King county is a region in the state of Washington, USA, and it’s known for including the city of Seattle. EDA involves analyzing and summarizing the data to gain insights, while machine learning modeling involves creating predictive models using algorithms. Here’s a general outline of the process that was followed.
 
-	When it comes to selling houses, certain fundamental determinants play a vital role in influencing potential buyers. Key factors include the property's land size and the dimensions of the house itself. If you've ever explored house prices online, you're likely familiar with the importance of accurately gauging a property's value. Overpricing a home can deter potential buyers, significantly diminishing the likelihood of a successful sale. Conversely, underpricing a home might lead to missed opportunities for maximizing profits.
+When it comes to selling houses, certain fundamental determinants play a vital role in influencing potential buyers. Key factors include the property's land size and the dimensions of the house itself. If you've ever explored house prices online, you're likely familiar with the importance of accurately gauging a property's value. Overpricing a home can deter potential buyers, significantly diminishing the likelihood of a successful sale. Conversely, underpricing a home might lead to missed opportunities for maximizing profits.
 
 ## Problem Statement:
 
@@ -96,6 +96,7 @@ The python Flask api was used to jsonify the databases:
 
 I leveraged Seaborn for data visualization, creating insightful pair plots, distribution plots, and heatmaps. These visualizations highlighted correlations, guided feature selection, and validated our regression models. Seaborn significantly contributed to enhancing our data analysis and decision-making process.
  
+![image](https://github.com/ai-bevo/Final-Project-Austin-Housing-Market/assets/125619215/fdfcbd67-84bf-4fb5-b5fb-8c0ebea74d50)
 
 
 • Feature Engineering & Selection for Machine Learning:
@@ -134,6 +135,9 @@ Refinement ensures a concise and clear articulation of the key inquiries, highli
 
    In our project, we initially employed two regression models: linear regression and random forest, to predict sales prices. However, upon analyzing      the results on the entire dataset, we observed that the R-squared values, which indicate the goodness of fit of the models, were not satisfactory.
  
+![image](https://github.com/ai-bevo/Final-Project-Austin-Housing-Market/assets/125619215/bbb6670f-9681-4af1-a876-d9aaaf2ec642)
+
+![image](https://github.com/ai-bevo/Final-Project-Austin-Housing-Market/assets/125619215/8bc16e32-25ec-4ef0-8053-d3412cafaf40)
 
  
 
@@ -145,9 +149,15 @@ Refinement ensures a concise and clear articulation of the key inquiries, highli
   With these subsets, we re-ran the linear regression and random forest models separately. Surprisingly, the results for both subsets showed an increase in the R-squared values, indicating a better fit for our models. Encouraged by this improvement, we proceeded to perform a correlation analysis on the features in each subset.
 
 (Mention the model used)
+
+![image](https://github.com/ai-bevo/Final-Project-Austin-Housing-Market/assets/125619215/60e4928a-e4eb-4054-a27e-baef07414941)
+
+![image](https://github.com/ai-bevo/Final-Project-Austin-Housing-Market/assets/125619215/3b74ea20-73b5-404b-9f9c-669094ded2db)
  
   Thinking that dropping some columns with low correlation could further enhance the model's performance, we began removing certain columns from the subsets. However, during this process, we observed a decrease in the R-squared values. This unexpected outcome signaled that removing these features had a significant and negatively impacted the models' predictive power.
  
+ ![image](https://github.com/ai-bevo/Final-Project-Austin-Housing-Market/assets/125619215/3507c3eb-9f95-4408-bb81-497e6ffab180)
+
   Realizing that our initial correlation-based feature removal was counterproductive, we promptly reverted the changes and restored the original subsets. This corrective action successfully brought the R-squared values back to their improved state.
 
 This experience taught us the importance of cautious feature selection and highlighted that while correlation analysis can guide feature removal, it's crucial to consider the broader impact on model performance. It reinforced the idea that model optimization is a dynamic process, requiring a balance between feature manipulation and maintaining the integrity of the predictive power achieved through the initial subset approach.
