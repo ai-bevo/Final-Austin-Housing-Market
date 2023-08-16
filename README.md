@@ -24,18 +24,15 @@ Welcome to the Seattle Washington Housing Market Analysis project, where we dive
 
 We completed a comprehensive analysis and a visualization dashboard using a Python Flask-powered API, HTML/CSS, JavaScript, and a SQL database plotly, leaflet, D3 and charts.js. This project seeks to provide valuable insights in understanding Seattle's real estate dynamics.
 
-In addition to dissecting historical trends, we've developed a cutting-edge machine learning model aimed at forecasting housing prices in the Seattle area. Leveraging the power of Random Forest and Linear Regression algorithms, we've trained a robust predictive model that takes into account a multitude of factors affecting housing prices. By incorporating data on property attributes, location details, economic indicators, and more, our model serves as a powerful tool for prospective buyers, sellers, and investors looking to make informed decisions in the complex Seattle real estate landscape.
-
-# 🏠 Final Production Database
-Uploaded the CSV data files into a Postgres database a relational database management system.
+In addition to dissecting historical trends, we've developed a machine learning model aimed at forecasting housing prices in the Seattle area. Leveraging the power of Gradient Boosting Regressor algorithms, we've trained a robust predictive model that takes into account a multitude of factors affecting housing prices. By incorporating data on property attributes, location details, economic indicators, and more, our model serves as a powerful tool for prospective buyers, sellers, and investors looking to make informed decisions in the complex Seattle real estate landscape.
 
 ---
 ## 🏠 Process <a name="process"></a>
 
-1. Clean data in CSV files.
-2. Import data into a Database.
-3. Create a flask app.
-4. Import table into Jupyter Notebook.
+1. Understand the data and what we are trying to accomplish.
+2. Clean data in CSV files using Excel and Jupyter Notebook.
+3. Import data into a Database.
+4. Create a flask app.
 5. Process data using a Machine Learning Model.
 6. Analyze the results and create visualizations.
 7. Create a dashboard and presentation.
@@ -44,16 +41,30 @@ Uploaded the CSV data files into a Postgres database a relational database manag
 ## 🏠 Data Sources <a name="data"></a>
 Data for this dataset was pulled from a kaggle csv. All data collected and used in this analysis is intended for educational purposes only.
 
-1. seattle_sales_all_data.csv (From kaggle)
+1. seattle_sales_all_data.csv ([From kaggle](https://www.kaggle.com/code/reidjohnson/house-price-eda-and-modeling-with-python/notebook))
 2. seattle_sales.csv (cleaned up kaggle csv of only seattle from 2018-2022)
+3. seattle_monthly_data.csv - (generated from kaggle dataset)
+4. Zipcode Data (generated with geopy using lat/long from kaggle dataset)
+5. Mortgage Interest Rates (https://fred.stlouisfed.org/series/MORTGAGE30US)
 
 ---
 ## 🏠 Findings and Conclusions <a name="findings"></a>
 The following findings and conclusions from the analysis are as follows:
 
- 
+The Seattle housing market, like many tech hubs, has seen a large increase in housing values in recent years. Our analysis focused on single family homes in the Seattle area from 2018 through 2022. All of the single family homes are definded by the zoning regulations within Seattle. Over the five year span the median home price for single family homes saw an increase of approximatley 31%. In dollars that represents an increase of a median home price of $800,000 in 2018 to a median price of $1,050,000 in 2022, which is an increase of $250,000. 
 
+<p align="center">
+<img src="images/median_price.jpg" alt="Median Price Graph" width="420" height="210">
+</p>
+
+Using the data from the kaggle dataset we were able to create a machine learning model that predicts the price of a home based on the features of the home. The model was trained using the Gradient Boosting Regressor algorithm. The model was trained using 33 different features from our dataset. Some of those features included the following - living sqft , lot sqft, latitude, longitude, year built, total bed rooms, total bathrooms, water front, zipcode as well as several more factors. 
+
+While training the model we went through several different regressions to generate the most accurate predictions we could. We found that we had the most accuracy by teaching the model with data from 2020-2022. The housing prices over this period displayed a more consistent increase in home prices over this period and generated a better fit or R^2 value from our model. Looking over the entire dataset from 2018-2022 the best R^2 value we were able to generate was approximatley 70%. By only analysing the data from 2020 - 2022 the model was able to generate an R^2 value of 80%.
  
+<p align="center">
+<img src="images/gb_model_R2.jpg" alt="GB Model" width="587" height="478">
+</p>
+
 ---
 ## 🏠 Part 1: Populate Database in pgAdmin <a name="part-1"></a>
 Deeper discription of the data can be found in the Resources folder king_county_SQL_schema.sql document
