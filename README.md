@@ -81,7 +81,7 @@ Deeper discription of the data can be found in the Resources kingcounty folder. 
 The python Flask api was used to jsonify the databases:
 1. seattle_sales.csv
 <p align="center">
-<img src="images/seattle_sales_data.png" alt="visualization of jsonified data" width="350" height="200">
+<img src="images/seattle_sales_data.png" alt="visualization of jsonified data" width="350" height="300">
 </p>
 
 2. seattle_monthly_data.csv
