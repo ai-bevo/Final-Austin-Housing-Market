@@ -210,20 +210,34 @@ https://public.tableau.com/shared/MF9ZN6KJN?:display_count=n&:origin=viz_share_l
 https://public.tableau.com/shared/RR6DB2M34?:display_count=n&:origin=viz_share_link
 
 ### Average Price/Sqft by Year Visualization:
-This Tableau graphic shows the average price per square foot trends over a specific time frame (2018-2022). The graph employs a gradient color scheme, with lighter shades representing lower average prices per square foot and darker shades indicating higher average prices per square foot. This visual representation allows for quick interpretation of how price dynamics have evolved annually. 
+This Tableau graphic shows the average price per square foot trends over a specific time frame (2018-2022). The graph employs a gradient color scheme, with lighter shades representing lower average prices per square foot and darker shades indicating higher average prices per square foot. This visual representation allows for a quick interpretation of how price dynamics have evolved annually. 
+
+<img width="668" alt="Screenshot 2023-08-16 at 8 28 22 PM" src="https://github.com/ai-bevo/Final-Project-Seattle-Housing-Market/assets/123502181/9a674cef-69e2-4680-94ce-522270a4db97">
+
 
 ### Square Footage of Home (2018-2022):
 These graphs represent how house square footage is distributed in Seattle from 2018 to 2022. The x-axis represents square footage ranges, and the y-axis indicates the corresponding count of houses. This snapshot provides insights into prevalent housing sizes and size trends over the five-year period.
+
+<img width="681" alt="Screenshot 2023-08-16 at 8 28 40 PM" src="https://github.com/ai-bevo/Final-Project-Seattle-Housing-Market/assets/123502181/9c9e823d-4500-4d35-b1d9-ab266c737efa">
 
 
 ### Sales Price Distribution (2018-2022):
 This Tableau visualization showcases the distribution of sales prices in Seattle's real estate market from 2018 to 2022. The graphs illustrate how different price ranges are represented, with the x-axis displaying sales prices and the y-axis indicating the count of sales within each range. This snapshot provides valuable insights into pricing patterns over that period of time.
 
+<img width="694" alt="Screenshot 2023-08-16 at 8 29 15 PM" src="https://github.com/ai-bevo/Final-Project-Seattle-Housing-Market/assets/123502181/7b8dbc18-21d9-43d6-9ed9-09f2b11af16e">
+
+
 ### Zip Codes by Average Price/sqft Graph:
 This Tableau visualization provides an overview of Seattle's real estate landscape based on zip codes and average price per square foot. The graph features zip codes along the y-axis and price per square foot along the x-axis. This graph allows for immediate comparison of zip codes in terms of their housing affordability and market value.
 
-### Average Sales Price Mapping with Average & Median Price Analysis (2018-2022):
+<img width="709" alt="Screenshot 2023-08-16 at 8 30 13 PM" src="https://github.com/ai-bevo/Final-Project-Seattle-Housing-Market/assets/123502181/290407b9-78dc-43ca-91b3-e94a373ff4bb">
+
+
+### Average Sales Price Mapping (2018-2022):
 This Tableau visualization combines a map with line graphs to depict the average sales prices of homes in Seattle from 2018 to 2022. The map itself displays geographic areas with color gradients representing different price ranges. The graphs show the trends in both average and median prices over the same period. The graph's x-axis represents the years, while the y-axis represents the price. This visualization enables users to compare the average and median price trends against the spatial distribution of price ranges, giving insights into the changing real estate market dynamics and providing a comprehensive view of price fluctuations over time.
+
+<img width="725" alt="Screenshot 2023-08-16 at 8 29 47 PM" src="https://github.com/ai-bevo/Final-Project-Seattle-Housing-Market/assets/123502181/334e4a5f-eed0-4aa2-9154-4a82299aea87">
+
 
 ### Zip Codes by Average Price per Square Feet 
 This visualization provides an interactive map displaying the average price per square foot by zip code in Seattle's real estate market between 2018-2022. Users can explore trends using filters for the bedroom count and specific zip codes. There is also a highlighting function for selected zip codes, enabling in-depth comparisons and insights into localized market dynamics. 
