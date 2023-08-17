@@ -14,7 +14,7 @@ Group Project # 4 - Seattle Washington Housing Market with machine learning mode
 - [Part 1: Populate Database in pgAdmin](#part-1)
 - [Part 2: Python Flask API ](#part-2)
 - [Part 3: Dashboard Page](#part-3)
-- [Part 4: ML modeling - multiple linear regression model](#part-4)
+- [Part 4: ML modeling - Linear Regression to Gradient Boost](#part-4)
 - [Part 5: Tableau Dashboard](#part-5) 
 
 ---
@@ -95,7 +95,7 @@ The python Flask api was used to jsonify the databases:
 
 
 ---
-## 🏠 Part 4: ML modeling - multiple linear regression model <a name="part-4"></a>
+## 🏠 Part 4: ML modeling - Linear Regression to Gradient Boost <a name="part-4"></a>
 
 ### Performing Exploratory data analysis (EDA) and building a machine learning model for King County house data. 
 
