@@ -121,7 +121,7 @@ When it comes to selling houses, certain fundamental determinants play a vital r
  Exploratory Data Analysis (EDA):
   - Conducting in-depth analysis to address key business questions and unveil insights within the dataset.
 
-I leveraged Seaborn for data visualization, creating insightful pair plots, distribution plots, and heatmaps. These visualizations highlighted correlations, guided feature selection, and validated our regression models. Seaborn significantly contributed to enhancing our data analysis and decision-making process.
+We utilized Seaborn for data visualization, creating insightful pair plots, distribution plots, and heatmaps. These visualizations highlighted correlations, guided feature selection, and validated our regression models. Seaborn significantly contributed to enhancing our data analysis and decision-making process.
  
 ![image](https://github.com/ai-bevo/Final-Project-Austin-Housing-Market/assets/125619215/fdfcbd67-84bf-4fb5-b5fb-8c0ebea74d50)
 
@@ -142,19 +142,21 @@ I leveraged Seaborn for data visualization, creating insightful pair plots, dist
 * Business Questions:
 • **Impact of Location on Prices in King County:**
   - How does the geographic location influence house prices in King County?
-  - What strategies should be employed to determine an optimal pricing strategy based on a property's location?
+ 
+King County is home to many tech companies, including Amazon and Microsoft, and being located close to these job opportunities can drive up demand for housing, thus increasing prices.
+Homes with views of water bodies, mountains, or other natural landscapes , Cascade Mountains tend can lead to premium prices for properties with scenic views.
+Zoning regulations can restrict the type and density of development in certain areas, which can impact property values. Areas with more lenient zoning might experience higher density development, potentially impacting the perceived value of single-family homes
+
+ 
 
 • **Non-Influential Factors on House Prices:**
   - Identifying factors that exhibit minimal impact on house prices and exploring their insignificance.
-
-• **Neighborly Influence on House Prices:**
-  - Examining the relationship between neighboring properties and their influence on the pricing of a given house, and vice versa.
-
-• **Beyond Square Footage:**
-  - Uncovering the primary drivers of house prices beyond the conventional metric of square footage.
+Factors that hadm minimal impact  on house prices garb sqt, gar sqt ID, City, Sale data
 
 • **Optimal Machine Learning Algorithm:**
   - Determining the most effective machine learning algorithm for accurately predicting house prices within the context of King County.
+
+While training the model we went through several different regressions to generate the most accurate predictions we could. We found that we had the most accuracy by teaching the model with data from 2020-2022. The housing prices over this period displayed a more consistent increase in home prices over this period and generated a better fit or R^2 value from our model. Looking over the entire dataset from 2018-2022 the best R^2 value we were able to generate was approximatley 70%. By only analysing the data from 2020 - 2022 the model was able to generate an R^2 value of 80%.
 
 Refinement ensures a concise and clear articulation of the key inquiries, highlighting the core themes of your analysis and investigation.
 
@@ -188,21 +190,6 @@ Refinement ensures a concise and clear articulation of the key inquiries, highli
   Realizing that our initial correlation-based feature removal was counterproductive, we promptly reverted the changes and restored the original subsets. This corrective action successfully brought the R-squared values back to their improved state.
 
 This experience taught us the importance of cautious feature selection and highlighted that while correlation analysis can guide feature removal, it's crucial to consider the broader impact on model performance. It reinforced the idea that model optimization is a dynamic process, requiring a balance between feature manipulation and maintaining the integrity of the predictive power achieved through the initial subset approach.
-
-
-
-
-Data Exploration and Preprocessing
-
-Model Selection
-  -  Pros:
-  -  Cons:
-
-About our Model
-
-Model Analysis
-
----
 
 ## 🏠 Part 5: Tableau Dashboard <a name="part-5"></a>
 
