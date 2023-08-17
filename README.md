@@ -92,7 +92,9 @@ The python Flask api was used to jsonify the databases:
 
 ---
 ## 🏠 Part 3: Dashboard Page <a name="part-3"></a>
-
+<p align="center">
+<img src="/images/seattle_dashboard.png" alt="Seattle dashboard" width="640" height="329">
+</p>
 
 ---
 ## 🏠 Part 4: ML modeling - Linear Regression to Gradient Boost <a name="part-4"></a>
