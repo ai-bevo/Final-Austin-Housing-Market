@@ -191,6 +191,10 @@ Refinement ensures a concise and clear articulation of the key inquiries, highli
 
 This experience taught us the importance of cautious feature selection and highlighted that while correlation analysis can guide feature removal, it's crucial to consider the broader impact on model performance. It reinforced the idea that model optimization is a dynamic process, requiring a balance between feature manipulation and maintaining the integrity of the predictive power achieved through the initial subset approach.
 
+We then moved on to using a random forest model, which improved the results, but it still wasn't quite what we were looking for. Through the power of Google, we found out about gradient boosting, which promised to operate similarly to random forest, but work better with datasets with a large amount of columns. 
+
+Gradient Boosting is similar to random forest except that the trees are trained one after the other rather than independently each new tree tries to fix the errors of the last. Using gradient boost with bucketing got us a decent R2 of .682 along with the more reasonable root mean squared error of $94,000. Using gradient boost on the entire dataset got us an R2 of .8.
+
 ## 🏠 Part 5: Tableau Dashboard <a name="part-5"></a>
 
 https://public.tableau.com/shared/MF9ZN6KJN?:display_count=n&:origin=viz_share_link
