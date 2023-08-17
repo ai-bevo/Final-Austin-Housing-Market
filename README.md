@@ -67,12 +67,28 @@ While training the model we went through several different regressions to genera
 
 ---
 ## 🏠 Part 1: Populate Database in pgAdmin <a name="part-1"></a>
-Deeper discription of the data can be found in the Resources folder king_county_SQL_schema.sql document
+Deeper discription of the data can be found in the Resources kingcounty folder. See king_county_SQL_schema.sql.
+1. king_county_sales: (this is the seattle sales data)
+    - 24,950 lines of data
+    - data collected from Jan-18 to Dec-22
+
+2. monthly_seattle_sales:
+    - 60 lines of data (monthly analysis)
+    - data collected from Jan-18 to Dec-22
 
 ---
 ## 🏠 Part 2: Python Flask API  <a name="part-2"></a>
 The python Flask api was used to jsonify the databases:
+1. seattle_sales.csv
+<p align="center">
+<img src="images/seattle_sales_data.png" alt="visualization of jsonified data" width="350" height="200">
+</p>
 
+2. seattle_monthly_data.csv
+
+<p align="center">
+<img src="images/monthly_seattle_sales.png" alt="visualization of jsonified data" width="350" height="200">
+</p>
 
 ---
 ## 🏠 Part 3: Dashboard Page <a name="part-3"></a>
