@@ -230,15 +230,21 @@ This Tableau visualization showcases the distribution of sales prices in Seattle
 ### Zip Codes by Average Price/sqft Graph:
 This Tableau visualization provides an overview of Seattle's real estate landscape based on zip codes and average price per square foot. The graph features zip codes along the y-axis and price per square foot along the x-axis. This graph allows for immediate comparison of zip codes in terms of their housing affordability and market value.
 
-<img width="709" alt="Screenshot 2023-08-16 at 8 30 13 PM" src="https://github.com/ai-bevo/Final-Project-Seattle-Housing-Market/assets/123502181/290407b9-78dc-43ca-91b3-e94a373ff4bb">
+<img width="734" alt="Screenshot 2023-08-16 at 8 29 24 PM" src="https://github.com/ai-bevo/Final-Project-Seattle-Housing-Market/assets/123502181/0ef797b0-d02d-4cbe-8481-a453678993de">
+
 
 
 ### Average Sales Price Mapping (2018-2022):
 This Tableau visualization combines a map with line graphs to depict the average sales prices of homes in Seattle from 2018 to 2022. The map itself displays geographic areas with color gradients representing different price ranges. The graphs show the trends in both average and median prices over the same period. The graph's x-axis represents the years, while the y-axis represents the price. This visualization enables users to compare the average and median price trends against the spatial distribution of price ranges, giving insights into the changing real estate market dynamics and providing a comprehensive view of price fluctuations over time.
 
-<img width="725" alt="Screenshot 2023-08-16 at 8 29 47 PM" src="https://github.com/ai-bevo/Final-Project-Seattle-Housing-Market/assets/123502181/334e4a5f-eed0-4aa2-9154-4a82299aea87">
+<img width="725" alt="Screenshot 2023-08-16 at 8 29 47 PM" src="https://github.com/ai-bevo/Final-Project-Seattle-Housing-Market/assets/123502181/dcd14807-ed62-4698-9de0-c803818b371c">
+
 
 
 ### Zip Codes by Average Price per Square Feet 
 This visualization provides an interactive map displaying the average price per square foot by zip code in Seattle's real estate market between 2018-2022. Users can explore trends using filters for the bedroom count and specific zip codes. There is also a highlighting function for selected zip codes, enabling in-depth comparisons and insights into localized market dynamics. 
+
+<img width="709" alt="Screenshot 2023-08-16 at 8 30 13 PM" src="https://github.com/ai-bevo/Final-Project-Seattle-Housing-Market/assets/123502181/178a6141-16d4-451d-8dcf-249c9f8f67d7">
+
+
 
