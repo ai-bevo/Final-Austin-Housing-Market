@@ -206,12 +206,25 @@ Model Analysis
 
 ## 🏠 Part 5: Tableau Dashboard <a name="part-5"></a>
 
-https://public.tableau.com/shared/JHKH6F9P9?:display_count=n&:origin=viz_share_link
+https://public.tableau.com/shared/MF9ZN6KJN?:display_count=n&:origin=viz_share_link
+https://public.tableau.com/shared/RR6DB2M34?:display_count=n&:origin=viz_share_link
+
+### Average Price/Sqft by Year Visualization:
+This Tableau graphic shows the average price per square foot trends over a specific time frame (2018-2022). The graph employs a gradient color scheme, with lighter shades representing lower average prices per square foot and darker shades indicating higher average prices per square foot. This visual representation allows for quick interpretation of how price dynamics have evolved annually. 
+
+### Square Footage of Home (2018-2022):
+These graphs represent how house square footage is distributed in Seattle from 2018 to 2022. The x-axis represents square footage ranges, and the y-axis indicates the corresponding count of houses. This snapshot provides insights into prevalent housing sizes and size trends over the five-year period.
+
+
+### Sales Price Distribution (2018-2022):
+This Tableau visualization showcases the distribution of sales prices in Seattle's real estate market from 2018 to 2022. The graphs illustrate how different price ranges are represented, with the x-axis displaying sales prices and the y-axis indicating the count of sales within each range. This snapshot provides valuable insights into pricing patterns over that period of time.
+
+### Zip Codes by Average Price/sqft Graph:
+This Tableau visualization provides an overview of Seattle's real estate landscape based on zip codes and average price per square foot. The graph features zip codes along the y-axis and price per square foot along the x-axis. This graph allows for immediate comparison of zip codes in terms of their housing affordability and market value.
 
 ### Average Sales Price Mapping with Average & Median Price Analysis (2018-2022):
 This Tableau visualization combines a map with line graphs to depict the average sales prices of homes in Seattle from 2018 to 2022. The map itself displays geographic areas with color gradients representing different price ranges. The graphs show the trends in both average and median prices over the same period. The graph's x-axis represents the years, while the y-axis represents the price. This visualization enables users to compare the average and median price trends against the spatial distribution of price ranges, giving insights into the changing real estate market dynamics and providing a comprehensive view of price fluctuations over time.
 
-### Housing Distribution in Seattle (2018-2022) with Square Feet:
-This Tableau visualization is a dynamic map representing residential houses in Seattle between 2018 and 2022. The map is color-coded to display the distribution of houses based on square footage and has a filter to select the number of bedrooms. Each house is represented by a marker on the map, and the color e of the marker corresponds to the square footage. This visualization provides a quick overview of the spatial distribution of different-sized houses with varying bedroom counts, allowing users to identify trends and patterns in the housing market over the specified years.
-
+### Zip Codes by Average Price per Square Feet 
+This visualization provides an interactive map displaying the average price per square foot by zip code in Seattle's real estate market between 2018-2022. Users can explore trends using filters for the bedroom count and specific zip codes. There is also a highlighting function for selected zip codes, enabling in-depth comparisons and insights into localized market dynamics. 
 
