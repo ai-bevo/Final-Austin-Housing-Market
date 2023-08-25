@@ -92,6 +92,7 @@ The python Flask api was used to jsonify the databases:
 
 ---
 ## 🏠 Part 3: Dashboard Page <a name="part-3"></a>
+The dashboard is being hosted on pythonanywhere.com visit the link to check it out: http://seattlehousing.pythonanywhere.com/ 
 <p align="center">
 <img src="/images/seattle_dashboard.png" alt="Seattle dashboard" width="640" height="329">
 </p>
